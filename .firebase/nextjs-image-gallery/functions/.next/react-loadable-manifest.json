@@ -1,0 +1,20 @@
+{
+  "..\\components\\Modal.tsx -> ../components/ModalMessage": {
+    "id": 9462,
+    "files": [
+      "static/chunks/462.afcd64630ce0363c.js"
+    ]
+  },
+  "index.tsx -> ../components/Modal": {
+    "id": 5385,
+    "files": [
+      "static/chunks/385.376d4e7f9565e164.js"
+    ]
+  },
+  "index.tsx -> ../components/ModalMenu": {
+    "id": 9496,
+    "files": [
+      "static/chunks/496.f6da111a9284a69b.js"
+    ]
+  }
+}
