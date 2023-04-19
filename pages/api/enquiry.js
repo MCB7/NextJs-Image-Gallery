@@ -1,5 +1,5 @@
 
-import { collection, addDoc, getFirestore} from "@firebase/firestore";
+import { collection, addDoc, getFirestore,  serverTimestamp} from "@firebase/firestore";
 
 
 
@@ -40,11 +40,15 @@ const handler = (req, res )=> {
               // Save data to the database from here
               
               const db  =  getFirestore();
+              const date = new Date(); 
+         
               const docRef = addDoc(collection(db, "email"), {
                 name: req.body.name,
                 email: req.body.email,
                 message:  req.body.message,
+                date: date
               })
+       
             
             
 

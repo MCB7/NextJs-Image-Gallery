@@ -256,11 +256,12 @@ $LIGHT_BOX_SHADOW: 1vw 1vw 2vw rgb(64, 65, 76), -1vw -1vw 2vw rgb(255,255,255);
     scroll-snap-type: x mandatory;
     opacity:0.1;
     transition:  opacity 3.25s ease, scale .50s ease-out, filter .30s ease-out , border-radius .30s ease-out;
-    
+    scrollbar-width: none;
     }
  
   .ImageContainer::-webkit-scrollbar {
       display: none;
+      
     }
   
   .ImageContainer img {
@@ -277,6 +278,7 @@ $LIGHT_BOX_SHADOW: 1vw 1vw 2vw rgb(64, 65, 76), -1vw -1vw 2vw rgb(255,255,255);
     pointer-events: visible;
     cursor:pointer;
     transform: scale(1.1)
+    
      }
 
    .IMGTransition {
@@ -672,6 +674,7 @@ $LIGHT_BOX_SHADOW: 1vw 1vw 2vw rgb(64, 65, 76), -1vw -1vw 2vw rgb(255,255,255);
       grid-row-end: 5;
       grid-column-end: 8;
       height:auto;
+      scrollbar-width: none;
 
       }
 
@@ -693,7 +696,7 @@ $LIGHT_BOX_SHADOW: 1vw 1vw 2vw rgb(64, 65, 76), -1vw -1vw 2vw rgb(255,255,255);
         scroll-snap-type: x mandatory;
         opacity:0.1;
         transition:  opacity 3.25s ease, scale .50s ease-out, filter .30s ease-out , border-radius .30s ease-out;
-       
+        scrollbar-width: none;
 
         }
       
@@ -706,8 +709,7 @@ $LIGHT_BOX_SHADOW: 1vw 1vw 2vw rgb(64, 65, 76), -1vw -1vw 2vw rgb(255,255,255);
       
       
       .ImageContainer img {
-      
-          width:75%;
+          max-width:75%;
           height:75%;
           margin-top:-10%;
           margin-right:50%;
@@ -731,7 +733,7 @@ $LIGHT_BOX_SHADOW: 1vw 1vw 2vw rgb(64, 65, 76), -1vw -1vw 2vw rgb(255,255,255);
       
       .ImageContainer img:hover{  
         display: block; 
-        width:75%;
+        max-width:75%;
           height:75%;
           scale:(1.1);
         transform: translateX(28px) translateY(6px)skewX(0deg) skewY(-1deg) ;  
@@ -1329,9 +1331,9 @@ opacity: 0;
 } 
 
 .AboutPotrait { 
-  max-width:100vw;
+  max-width:100vh;
   padding:5%;
-  height:90vh;
+  height:auto;
   margin: 1%;
   
 }
@@ -1616,8 +1618,8 @@ opacity: 0;
     } 
     
     .AboutPotrait { 
-      width:90vw;
-      height:90vw;
+      width:50vh;
+      height:auto;
       padding:5%;
      margin-bottom:-1.75em;
      margin-left: 1.2em;
@@ -1629,15 +1631,16 @@ opacity: 0;
     .AboutBio { 
       max-width:100vw;
       height:auto;
-      margin: 0%;
+      margin: auto;
       color:$DARK_TEXT_COLOR;
       font-family: 'Nanum Myeongjo', serif;
-      font-size: 3.1vw;
+      font-size: 3.75vw;
       line-height:1.5em;
      
-      padding:5%;
+      padding:4%;
       margin-bottom:12em;
       margin-left:1.2em;
+      margin-bottom:20em;
     
     
     }
@@ -1653,12 +1656,13 @@ opacity: 0;
       margin: 1%;
       box-sizing: border-box;
       flex-grow: 1;
-      color:$DARK_TEXT_COLOR;
       font-family: 'Nanum Myeongjo', serif;
       z-index:100000001;
       animation: TextAreaIntro 0.25s ease-in forwards;
       animation-delay: 1.25s;
-      color:$DARK_TEXT_COLOR;     box-shadow: inset 0.46vw.46vw 0.99vw #24242b,
+      color:$DARK_TEXT_COLOR;  
+      background-color:#34363e;
+      box-shadow: inset 0.46vw.46vw 0.99vw #24242b,
       inset -0.26vw -0.26vw  0.99vw #5c5e6d;
       animation: none !important;
       animation-delay: none !important;
@@ -1680,11 +1684,12 @@ opacity: 0;
     }
 
     .inputflex input {
-
+      background-color:#34363e;
       box-shadow: inset 0.46vw.46vw 0.99vw #24242b,
       inset -0.26vw -0.26vw  0.99vw #5c5e6d;
       animation: none !important;
       animation-delay: none !important;
+
   
     
       }
@@ -2043,9 +2048,9 @@ opacity: 0;
   } 
   
   .AboutPotrait { 
-    max-width:70vw;
+    max-width:75%;
     padding:5%;
-    height:60vh;
+    height:auto;
     margin:auto;
   
     align-items: center;
@@ -2061,12 +2066,13 @@ opacity: 0;
     margin: 1%;
     color:$DARK_TEXT_COLOR;
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 3vw;
+    font-size:  3.75vw;
     line-height: 150%;
     padding:1em;
     margin:auto;
     align-items: center;
     align-content: center;
+ 
     
   
   
@@ -2088,11 +2094,10 @@ opacity: 0;
   } 
   
   .AboutPotrait { 
-    max-width:70vw;
+    max-width:50vw;
     padding:5%;
-    height:60vh;
+    height:50vw;
     margin:auto;
-  
     align-items: center;
     align-content: center;
 
@@ -2101,12 +2106,12 @@ opacity: 0;
   }
   
   .AboutBio { 
-    max-width:100vw;
+    max-width:100%;
     height:auto;
     margin: 1%;
     color:$DARK_TEXT_COLOR;
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 3vh;
+    font-size: 4vh;
     line-height: 150%;
     padding:1em;
     margin:auto;
@@ -2118,7 +2123,7 @@ opacity: 0;
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 500px) {
   
   .AboutFlexContainer{
 
@@ -2128,9 +2133,9 @@ opacity: 0;
   } 
   
   .AboutPotrait { 
-    max-width:60vw;
+    max-width:40%;
     padding:5%;
-    height:60vh;
+    height:60%;
     margin:auto;
   
     align-items: center;

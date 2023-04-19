@@ -278,6 +278,8 @@ if ('IntersectionObserver' in window) {
           
         />
           <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, 
+             minimum-scale=1.0, maximum-scale=1.0"/>
           <link rel="shortcut icon" href="/favicon_sw.svg" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
           <meta name="theme-color" content="#40414c" />
@@ -354,7 +356,7 @@ if ('IntersectionObserver' in window) {
                 {setBoolTog(true)}
               }, 500);
                 
-                setModalID(ID); setImageToggle(boolTog => !boolTog); setSelectedTitle(art.data().title); setSelectedImg(art.data().url); setSelectedDate(art.data().date); ; setSelectedPrice(art.data().price); setSelectedSize(art.data().dimensions); setSelectedMedium(art.data().medium) }} className={'lazy-images'} src='https://firebasestorage.googleapis.com/v0/b/nextjs-image-gallery.appspot.com/o/loader-min%20(3).gif?alt=media&token=5be9fe55-1333-493c-b8c1-c855c3b4ab10' data-src={art.data().url} id={ID} alt="Gallery Image" key={art.id} width={640} height={360} priority={true} unoptimized />
+                setModalID(ID); setImageToggle(boolTog => !boolTog); setSelectedTitle(art.data().title); setSelectedImg(art.data().url); setSelectedDate(art.data().date); ; setSelectedPrice(art.data().price); setSelectedSize(art.data().dimensions); setSelectedMedium(art.data().medium) }} className={'lazy-images'} src='https://firebasestorage.googleapis.com/v0/b/nextjs-image-gallery.appspot.com/o/spinner%2Floader-min%20(3).gif?alt=media&token=e6f5c9da-af4d-4590-96ec-b29f5da82a06' data-src={art.data().url} id={ID} alt="Gallery Image" key={art.id} width={640} height={360} priority={true} unoptimized />
                 <div className={styles.HeightBlock}></div>
               </>
               )

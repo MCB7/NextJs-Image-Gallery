@@ -38,10 +38,12 @@ const handler = (req, res)=>{
                 if (reCaptchaRes?.score > 0.5 && req.body.email != null) {
                     // Save data to the database from here
                     const db = (0,_firebase_firestore__WEBPACK_IMPORTED_MODULE_0__.getFirestore)();
+                    const date = new Date();
                     const docRef = (0,_firebase_firestore__WEBPACK_IMPORTED_MODULE_0__.addDoc)((0,_firebase_firestore__WEBPACK_IMPORTED_MODULE_0__.collection)(db, "email"), {
                         name: req.body.name,
                         email: req.body.email,
-                        message: req.body.message
+                        message: req.body.message,
+                        date: date
                     });
                     res.status(200).json({
                         status: "success",
